@@ -12,7 +12,7 @@ io.on('connection', (socket) => {
     });
 
     socket.on('add-message', (message, username) => {
-        io.emit('message', {type: 'new-message', text: message, username : username});
+        io.emit('message', {type: 'new-message', text: message});
     });
 });
 

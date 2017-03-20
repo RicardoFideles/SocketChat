@@ -8,7 +8,7 @@ export class ChatService {
     private socket:any;
 
     sendMessage(message:string, username:string) {
-        this.socket.emit('add-message', message, username);
+        this.socket.emit('add-message', message);
     }
 
     getMessages() {

@@ -1,0 +1,10 @@
+<div>
+    <label>Username:</label>
+    <input type="text" [(ngModel)]="username" name="username">
+</div>
+<input type="text" placeholder="Enter Message..." [(ngModel)]="message" name="message" (keyup.enter)="sendMessage()">
+<br>
+
+<div *ngFor="let message of messages">
+    {{message.text}}
+</div>

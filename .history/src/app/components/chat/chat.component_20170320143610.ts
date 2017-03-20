@@ -11,8 +11,7 @@ export class ChatComponent implements OnInit, OnDestroy {
   messages: any = [];
   message: string;
   connection:any;
-  username:string;
-  alert:any = false;
+  userName:string;
 
   constructor(private _chatService:ChatService) { 
 
@@ -31,13 +30,8 @@ export class ChatComponent implements OnInit, OnDestroy {
 
 
   sendMessage() {
-    this._chatService.sendMessage(this.message, this.username);
+    this._chatService.sendMessage(this.message);
     this.message = '';
-  }
-
-  setUsername() {
-    this._chatService.setUsername(this.username);
-    this.alert = 'Username is set';
   }
 
 }
